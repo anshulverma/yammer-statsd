@@ -1,0 +1,30 @@
+{
+  "name": "yammer-statsd",
+  "version": "0.0.1",
+  "description": "graph yammer metrics using statsd",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anshulverma/yammer-statsd"
+  },
+  "keywords": [
+    "yammer",
+    "statsd",
+    "metrics",
+    "graphite"
+  ],
+  "author": "anshul.verma86@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/anshulverma/yammer-statsd/issues"
+  },
+  "homepage": "https://github.com/anshulverma/yammer-statsd",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.11.0",
+    "jshint-stylish": "^1.0.1"
+  }
+}

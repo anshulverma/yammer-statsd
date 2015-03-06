@@ -1,0 +1,9 @@
+# Library modules
+node_modules/
+
+# Log files
+*.log
+
+# Temporary files
+*~
+*#*
