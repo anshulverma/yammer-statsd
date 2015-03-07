@@ -7,3 +7,8 @@ node_modules/
 # Temporary files
 *~
 *#*
+
+# ODE
+/.idea/
+*.iml
+*.ipr

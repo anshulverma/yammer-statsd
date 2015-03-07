@@ -10,3 +10,6 @@
 
 # SCM
 -.git/
+
+# IDE
+-.idea/

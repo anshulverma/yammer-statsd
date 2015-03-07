@@ -2,9 +2,8 @@
   "name": "yammer-statsd",
   "version": "0.0.1",
   "description": "graph yammer metrics using statsd",
-  "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node bin/ystat"
   },
   "repository": {
     "type": "git",
@@ -26,5 +25,13 @@
     "grunt": "^0.4.5",
     "grunt-contrib-jshint": "^0.11.0",
     "jshint-stylish": "^1.0.1"
+  },
+  "dependencies": {
+    "async": "^0.9.0",
+    "colors": "^1.0.3",
+    "complete": "^0.4.4",
+    "flatiron": "git+https://github.com/anshulverma/flatiron.git",
+    "optimist": "^0.6.1",
+    "pkginfo": "^0.3.0"
   }
 }

@@ -1,0 +1,19 @@
+#!/usr/bin/env node
+
+(function() {
+  var ystat;
+
+  process.title = 'ystat';
+
+  ystat = require('../lib/cli/bootstrap');
+
+  ystat.start(function(err) {
+    if (!err) {
+      ystat.info('YStat'.grey + ' done'.green.bold);
+    } else {
+      ystat.error((err.message || 'unknown error').red.bold);
+    }
+    return process.exit(err ? 1 : 0);
+  });
+
+}).call(this);
