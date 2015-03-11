@@ -1,12 +1,3 @@
-# Coffee source files
-src/*.coffee
-
-# Test source
-test/
-
-# Sourcemap
-*.map
-
 # Temporary files
 *~
 
@@ -19,14 +10,3 @@ Gruntfile.coffee
 # Projectile
 .projectile
 
-# Coverage files
-coverage/
-
-# Coffee lint file
-coffeelint.json
-
-# Test file's documentation
-docs/*test*.html
-
-# Bower
-bower_components/
