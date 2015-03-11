@@ -32,6 +32,7 @@
     "complete": "^0.4.4",
     "conditional": "^5.3.0",
     "flatiron": "git+https://github.com/anshulverma/flatiron.git",
+    "moment-timezone": "^0.3.0",
     "optimist": "^0.6.1",
     "pkginfo": "^0.3.0",
     "request": "^2.53.0",
