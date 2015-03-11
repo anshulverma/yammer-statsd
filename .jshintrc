@@ -8,8 +8,8 @@
   "noarg": true,    // true: Prohibit use of `arguments.caller` and `arguments.callee`
   "sub": true,      // true: Tolerate using `[]` notation when it can still be expressed in dot notation
   "undef": true,    // true: Require all non-global variables to be declared (prevents global leaks)
-  "unused": true,
+  "unused": true,   // true: Warn if a variable is never used
   "node": true,     // Node.js
-  "-W117": true,    // true: Ignore `not defined` errors as an example of using a rule (W117) by code.
-  "quotmark": true
+  "-W117": true,    // true: Ignore `not defined` errors as an example of using a rule (W117) by code
+  "quotmark": true  // true: Enforce consistency of quotation mark
 }
