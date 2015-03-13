@@ -5,6 +5,20 @@
 
   process.title = 'ystat';
 
+  function handleError(err) {
+    var logger = (ystat || {logger: console}).logger;
+    if (err.stack != null) {
+      logger.error(err.stack);
+    } else {
+      logger.error((err.message || 'unknown error').red.bold);
+    }
+    process.exit(1);
+  }
+
+  process.on('uncaughtException', function(err) {
+    handleError(err);
+  });
+
   ystat = require('../lib/cli/bootstrap');
 
   ystat.on('complete', function() {
@@ -12,14 +26,7 @@
     return process.exit(0);
   });
 
-  ystat.on('error', function(err) {
-    if (err.stack != null) {
-      ystat.logger.error(err.stack);
-    } else {
-      ystat.logger.error((err.message || 'unknown error').red.bold);
-    }
-    process.exit(1);
-  });
+  ystat.on('error', handleError);
 
   ystat.start();
 
