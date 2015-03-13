@@ -7,13 +7,20 @@
 
   ystat = require('../lib/cli/bootstrap');
 
-  ystat.start(function(err) {
-    if (!err) {
-      ystat.info('YStat'.grey + ' done'.green.bold);
-    } else {
-      ystat.error((err.message || 'unknown error').red.bold);
-    }
-    return process.exit(err ? 1 : 0);
+  ystat.on('complete', function() {
+    ystat.logger.info('YStat'.grey + ' done'.green.bold);
+    return process.exit(0);
   });
+
+  ystat.on('error', function(err) {
+    if (err.stack != null) {
+      ystat.logger.error(err.stack);
+    } else {
+      ystat.logger.error((err.message || 'unknown error').red.bold);
+    }
+    process.exit(1);
+  });
+
+  ystat.start();
 
 }).call(this);

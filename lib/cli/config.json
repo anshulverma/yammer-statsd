@@ -1,0 +1,74 @@
+{
+  "url": {
+    "description": "metric url",
+    "alias": "r",
+    "string": true,
+    "prompt": {
+      "message": "Enter metric URL",
+      "type": "string"
+    }
+  },
+  "login-url": {
+    "description": "login url",
+    "alias": "l",
+    "string": true,
+    "prompt": {
+      "message": "Enter login URL",
+      "type": "string"
+    }
+  },
+  "auth-type": {
+    "description": "authentication type",
+    "alias": "a",
+    "string": true,
+    "prompt": {
+      "message": "Enter authentication type",
+      "type": "string",
+      "pattern": "^url$",
+      "hint": "supported authentication types: url"
+    }
+  },
+  "user": {
+    "description": "username",
+    "alias": "u",
+    "string": true,
+    "prompt": {
+      "message": "Enter username",
+      "type": "string",
+      "pattern": "^[a-zA-Z]+$",
+      "hint": "username must only contain letters"
+    }
+  },
+  "password": {
+    "description": "password",
+    "alias": "p",
+    "string": true,
+    "prompt": {
+      "message": "Enter password",
+      "type": "string",
+      "pattern": "[^\\s]+",
+      "hint": "password must be non empty"
+    }
+  },
+  "metric": {
+    "description": "metric name",
+    "alias": "m",
+    "string": true,
+    "prompt": {
+      "message": "Enter metric name",
+      "type": "string",
+      "pattern": "[^\\s]+",
+      "hint": "metric name cannot be empty"
+    }
+  },
+  "help": {
+    "description": "print this help information",
+    "alias": "h",
+    "boolean": true
+  },
+  "version": {
+    "description": "print version information",
+    "alias": "v",
+    "boolean": true
+  }
+}
