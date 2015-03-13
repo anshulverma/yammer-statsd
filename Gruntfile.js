@@ -3,7 +3,7 @@ module.exports = function(grunt) {
     jshint: {
       allFiles: [
         'Gruntfile.js',
-        'index.js',
+        'bin/ystat',
         'lib/**/*.js',
         'test/**/*.js'
       ],
@@ -22,12 +22,24 @@ module.exports = function(grunt) {
         },
         src: ['test/**/*.js']
       }
+    },
+    jscs: {
+      allFiles: [
+        'Gruntfile.js',
+        'bin/ystat',
+        'lib/**/*.js',
+        'test/**/*.js'
+      ],
+      options: {
+        config: '.jscsrc.json'
+      }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-mocha-test');
+  grunt.loadNpmTasks('grunt-jscs');
 
   grunt.registerTask('test', 'mochaTest');
-  grunt.registerTask('test-all', ['jshint', 'mochaTest']);
+  grunt.registerTask('style', ['jshint', 'jscs']);
 };

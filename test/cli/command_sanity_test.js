@@ -1,10 +1,10 @@
-var fs = require('fs'),
-    path = require('path'),
-    format = require('string-template'),
-    assert = require('chai').assert;
+var fs = require('fs');
+var path = require('path');
+var format = require('string-template');
+var assert = require('chai').assert;
 
-var commandsDir = path.resolve(__dirname, '../../lib/cli/commands'),
-    commands = [];
+var commandsDir = path.resolve(__dirname, '../../lib/cli/commands');
+var commands = [];
 fs.readdirSync(commandsDir).forEach(function(commandFileName) {
   var commandName = commandFileName.split('.')[0];
   commands.push({

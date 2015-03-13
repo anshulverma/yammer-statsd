@@ -4,7 +4,7 @@
   "description": "graph yammer metrics using statsd",
   "scripts": {
     "start": "node bin/ystat",
-    "test": "grunt test-all"
+    "test": "grunt test style"
   },
   "repository": {
     "type": "git",
@@ -26,6 +26,7 @@
     "chai": "^2.1.1",
     "grunt": "^0.4.5",
     "grunt-contrib-jshint": "^0.11.0",
+    "grunt-jscs": "^1.5.0",
     "grunt-mocha-test": "^0.12.7",
     "jshint-stylish": "^1.0.1",
     "mocha": "^2.2.1"
