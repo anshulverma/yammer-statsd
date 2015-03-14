@@ -15,9 +15,7 @@
     process.exit(1);
   }
 
-  process.on('uncaughtException', function(err) {
-    handleError(err);
-  });
+  process.on('uncaughtException', handleError);
 
   ystat = require('../lib/cli/bootstrap');
 
@@ -27,6 +25,7 @@
   });
 
   ystat.on('error', handleError);
+  ystat.logger.onError(handleError);
 
   ystat.start();
 
